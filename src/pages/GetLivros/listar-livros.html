@@ -1,0 +1,25 @@
+<!--
+  Generated template for the ListarLivrosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Listar Livros</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!-- livros e a lista de livros que estamos iterando com o for each -->
+  <ion-list>
+    <ion-item *ngFor="let livro of lista_livros" (click)="irParaDestino(livro)">
+      <h2>{{livro.details.title}}</h2>
+      <p>{{livro.details.subtitle}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
